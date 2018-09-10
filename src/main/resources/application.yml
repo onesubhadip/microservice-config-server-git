@@ -1,0 +1,20 @@
+---
+server:
+  port: 9090
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/onesubhadip/spring-cloud-config-git
+          search-paths:
+            - 'file-processor'
+            - 'diff-reporter'
+          repos:
+            perf:
+              uri: https://github.com/onesubhadip/spring-cloud-config-git-perf
+              pattern:
+                - "*/perf"
+              search-paths:
+                - 'file-processor'
+                - 'diff-reporter'
